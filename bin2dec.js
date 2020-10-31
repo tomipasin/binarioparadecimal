@@ -1,14 +1,19 @@
+//Criamos uma função para o input do valor (inputV).
+//Esta função vai criar uma variável (binario) e atribuir a ela o valor do id num em html
+//convertido para número.
 function inputV(){
     binario = Number(document.getElementById("num").value);
     return binario
 };
-
-
+//criamos outra função para convertero valor binário em decimal.
+//a função bin2dec tem como parâmetro bin
 function bin2dec(bin){
-
+    //a funço vai retornar o resultado de parseInt do bin na base 2 transformando em string na base 10
+    //basicamente o js converte binários em decimasi dessa forma.
     return parseInt(bin,2).toString(10)
 };
-
+//o botão de converter no html chama a função abrir() que executa a função inputV() e depois trabalha o DOM com 
+//os dados determinados abaixo.
 function abrir(){
     let bina = inputV();
     document.getElementById('inicial').innerHTML += `<p class="p-3 mb-2 bg-warning text-dark"> O número que você escolheu é <strong>${bina}</strong></p></br>`;
